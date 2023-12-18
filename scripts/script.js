@@ -14,8 +14,7 @@ inputName.value = name.textContent;
 inputProfession.value = profession.textContent;
 
 //Función para abrir el popup
-function openPopup() {
-  console.log("Estoy funcionando");
+function openPopup() {  
   popup.classList.add("popup_opened");
 }
 
