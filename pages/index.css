@@ -30,3 +30,6 @@
 @import url(../blocks/cards/__card/_text/cards__card_text.css);
 @import url(../blocks/cards/__card/_name/cards__card_name.css);
 @import url(../blocks/cards/__card/_heart/cards__card_heart.css);
+
+@import url(../blocks/footer/footer.css);
+
