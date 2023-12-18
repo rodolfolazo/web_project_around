@@ -1,0 +1,15 @@
+.cards__card_heart {
+  width: 20.76px;
+  height: 18.13px;
+  background-image: url('../../../../images/heart.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-right: 22.24px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 750px) {
+  .cards__card_heart {
+    margin-right: 15px;
+  }
+}
