@@ -1,0 +1,10 @@
+.popup__input-text_acerca {
+  margin-bottom: 48px;
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 750px) {
+  .popup__input-text_acerca {
+    margin-bottom: 45px;
+  }
+}
