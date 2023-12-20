@@ -1,8 +1,0 @@
-.profile__cabecera{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  column-gap: 18px;
-  flex: 0 1 auto;
-}

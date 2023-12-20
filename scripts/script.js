@@ -14,13 +14,19 @@ inputName.value = name.textContent;
 inputProfession.value = profession.textContent;
 
 //Función para abrir el popup
-function openPopup() {  
-  popup.classList.add("popup_opened");
+function openPopup() {
+  popup.style.display = "flex";
+  setTimeout(function() {
+    popup.classList.add("popup_opened");
+  }, 100);
 }
 
 //Función para cerrar el popup
 function closePopup() {
   popup.classList.remove("popup_opened");
+  setTimeout(function() {
+    popup.style.display = "none";
+  }, 1000);
 }
 
 //Función que actualiza el profile

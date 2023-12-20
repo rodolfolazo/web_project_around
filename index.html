@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">  
-  <link rel="stylesheet" href="pages/index.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="page/index.css">
   <title>Around the US</title>
 </head>
 
@@ -16,19 +16,15 @@
   <main class="main">
     <section class="profile">
       <h2 class="profile__h2">Perfil</h2>
-      <div class="profile__info">
-        <div class="profile__avatar_container">
-          <div class="profile__avatar_edit">
-            <img class="profile__avatar" src="./images/jacques2.jpg" alt="Imagen de perfile de Jackes Cousteu">
-          </div>
+      <div class="profile__avatar_container">
+        <img class="profile__avatar" src="./images/jacques2.jpg" alt="Imagen de perfile de Jackes Cousteu">
+      </div>
+      <div class=profile__text>
+        <div class="profile__title_container">
+          <p class="profile__title">Jacques Cousteau</p>
+          <div class="profile__edit"></div>
         </div>
-        <div class="profile__text">
-          <div class="profile__tittle_container">
-            <p class="profile__title">Jacques Cousteau</p>
-            <div class="profile__edit"></div>
-          </div>
-          <p class="profile__subtitle">Explorer</p>
-        </div>
+        <p class="profile__subtitle">Explorer</p>
       </div>
       <div class="profile__add"></div>
     </section>
@@ -38,21 +34,21 @@
         <li class="cards__card">
           <img src="./images/yosemite-valley-card.jpg" class="cards__card_image" alt="Imagen del valle de Yosemite">
           <div class="cards__card_text">
-            <div class="cards__card_name">Yosemite Valley</div>
+            <p class="cards__card_name">Yosemite Valley</p>
             <div class="cards__card_heart"> </div>
           </div>
         </li>
         <li class="cards__card">
           <img src="./images/lake-louise-card.png" class="cards__card_image" alt="Imagen del lago Louise">
           <div class="cards__card_text">
-            <div class="cards__card_name">Lake Louse</div>
+            <p class="cards__card_name">Lake Louse</p>
             <div class="cards__card_heart"> </div>
           </div>
         </li>
         <li class="cards__card">
           <img src="./images/bald-mountains-card.png" class="cards__card_image" alt="Crepúsculo en las montañanas Bald">
           <div class="cards__card_text">
-            <div class="cards__card_name">Bald Mountains</div>
+            <p class="cards__card_name">Bald Mountains</p>
             <div class="cards__card_heart"> </div>
           </div>
         </li>
@@ -60,15 +56,15 @@
           <img src="./images/latemar-card.png" class="cards__card_image"
             alt="Imagen de una noche con cielo estrellado en las montañas Latemar">
           <div class="cards__card_text">
-            <div class="cards__card_name">Latemar</div>
-            <div class="cards__card_heart" ></div>
+            <p class="cards__card_name">Latemar</p>
+            <div class="cards__card_heart"></div>
           </div>
         </li>
         <li class="cards__card">
           <img src="./images/vanoise-card.png" class="cards__card_image"
             alt="Imagen de un lago al lado de una montaña en el parque nacional de Vanoise">
           <div class="cards__card_text">
-            <div class="cards__card_name">Vanoise Nationa...</div>
+            <p class="cards__card_name">Vanoise Nationa...</p>
             <div class="cards__card_heart"></div>
           </div>
         </li>
@@ -76,7 +72,7 @@
           <img src="./images/lake-dibraies-card.png" class="cards__card_image"
             alt="Imagen de unos botes en el lago di Braies">
           <div class="cards__card_text">
-            <div class="cards__card_name">Lago di Braies</div>
+            <p class="cards__card_name">Lago di Braies</p>
             <div class="cards__card_heart"></div>
           </div>
         </li>
@@ -99,4 +95,5 @@
   </section>
   <script src="scripts/script.js"></script>
 </body>
+
 </html>
