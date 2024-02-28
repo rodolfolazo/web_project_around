@@ -51,7 +51,7 @@
   box-sizing: border-box;
 }
 
-.popup__input-text_nombre {
+.popup__input-text_name {
   margin-bottom: 43px;
 }
 
@@ -83,7 +83,7 @@
   background-position: center;
   border: none;
   cursor: pointer;
-  transition: background-image .3s linear;
+  transition: background-image 0.3s linear;
 }
 
 .popup__close:hover {

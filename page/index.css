@@ -1,5 +1,5 @@
 @import url(../vendor/normalize.css);
-@import url(./format.css);
+/* @import url(./format.css); */
 @import url(../fonts/fonts.css);
 @import url(../blocks/root.css);
 /* Bloque header */
@@ -14,3 +14,5 @@
 @import url(../blocks/footer.css);
 /* Bloque Popup */
 @import url(../blocks/popup.css);
+/* Bloque PopupCard */
+@import url(../blocks/modalImage.css);

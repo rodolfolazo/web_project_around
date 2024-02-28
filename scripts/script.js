@@ -1,23 +1,71 @@
 //Declaro variables a utilizar
-let popup_open = document.querySelector(".profile__edit");
-let popup_close = document.querySelector(".popup__close");
-let popup = document.querySelector(".popup");
-
-let name= document.querySelector(".profile__title");
-let profession = document.querySelector(".profile__subtitle");
-let inputName = document.querySelector(".popup__input-text_nombre");
-let inputProfession = document.querySelector(".popup__input-text_acerca");
+let popup_profile = document.querySelector(".profile__edit"); //Selecciono al lapiz que abre el popup
+let popup_card = document.querySelector(".profile__add"); //Selecciono el botón añadir cards
+let popup_close = document.querySelector(".popup__close"); //Selecciono a la X que cierra el popup
+let modalImage_close = document.querySelector(".modalImage__close"); //Selecciono a la X que cierra el popup
+let popup = document.querySelector(".popup"); //Selecciono el popup
 let button = document.querySelector(".popup__btn-save");
 
-//Capturo los valores del nombre y profesión en variables
-inputName.value = name.textContent;
-inputProfession.value = profession.textContent;
+//Funcion que edita el formulario dentro del popup
+function editForm(evt) {
+  //Visualizo el popup
+  openPopup();
+  //Determino que formulario procesaré
+  if (evt.target.classList.contains("profile__edit")) {
+    popupProfile();
+  }
+  if (evt.target.classList.contains("profile__add")) {
+    popupCards();
+  }
+}
+
+//Función para editar popup de perfil
+function popupProfile() {
+  document.querySelector(".popup__title").textContent = "Edit Profile";
+  document.querySelector(".popup__btn-save").textContent = "Save";
+  //First Input
+  document
+    .querySelector(".popup__input-text_name")
+    .setAttribute("placeholder", "Nombre");
+  document.querySelector(".popup__input-text_name").value =
+    document.querySelector(".profile__title").textContent;
+  //Second Input
+  document
+    .querySelector(".popup__input-text_acerca")
+    .setAttribute("placeholder", "Acerca de mi");
+  document.querySelector(".popup__input-text_acerca").value =
+    document.querySelector(".profile__subtitle").textContent;
+}
+
+//Función para editar popup de cards
+function popupCards() {
+  document.querySelector(".popup__title").textContent = "Nuevo Lugar";
+  document.querySelector(".popup__btn-save").textContent = "Crear";
+  //First Input
+  document.querySelector(".popup__input-text_name").value = "";
+  document
+    .querySelector(".popup__input-text_name")
+    .setAttribute("placeholder", "Título");
+  //Second Input
+  document.querySelector(".popup__input-text_acerca").value = "";
+  document
+    .querySelector(".popup__input-text_acerca")
+    .setAttribute("placeholder", "Enlace a la imagen");
+}
 
 //Función para abrir el popup
 function openPopup() {
   popup.style.display = "flex";
   setTimeout(function() {
     popup.classList.add("popup_opened");
+  }, 100);
+}
+
+//Función para abrir el modal image
+function openModal() {
+  modalImage.style.display = "block";
+  setTimeout(function() {
+    modalImage.classList.add("modalImage_opened");
   }, 100);
 }
 
@@ -29,15 +77,38 @@ function closePopup() {
   }, 1000);
 }
 
-//Función que actualiza el profile
-function editProfile(e) {
+//Función para cerrar el modal
+function closeModal() {
+  modalImage.classList.remove("modalImage_opened");
+  setTimeout(function() {
+    modalImage.style.display = "none";
+  }, 1000);
+}
+
+//Función procesar popup
+//Esta función determinará que tipo de popup se ha lanzado y de acuerdo a eso la procesará
+function procesarPopup(e) {
   e.preventDefault();
-  name.textContent = inputName.value;
-  profession.textContent = inputProfession.value;
+  //Determino que tipo de popup se ha lanzado
+  const tipoTitulo = document.querySelector(".popup__title");
+  //Si el popup es de editar perfile se ejecuta lo siguiente
+  if (tipoTitulo.textContent === "Edit Profile") {
+    document.querySelector(".profile__title").textContent =
+      document.querySelector(".popup__input-text_name").value;
+    document.querySelector(".profile__subtitle").textContent =
+      document.querySelector(".popup__input-text_acerca").value;
+  }
+  //Si el popup es para agregar una tarjeta se ejecuta el siguiente código
+  if (tipoTitulo.textContent === "Nuevo Lugar") {
+    addCard();
+  }
+
   closePopup();
 }
 
 //Añado eventos a mis elementos
-popup_open.addEventListener("click", openPopup);
+popup_profile.addEventListener("click", editForm);
+popup_card.addEventListener("click", editForm);
 popup_close.addEventListener("click", closePopup);
-button.addEventListener("click", editProfile);
+modalImage_close.addEventListener("click", closeModal);
+button.addEventListener("click", procesarPopup);

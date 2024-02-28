@@ -11,7 +11,9 @@
 
 <body class="root">
   <header class="header">
-    <h1><a href="#" class="header__link"><img class="header__logo" src="./images/logo.svg" alt="logo"></a></h1>
+    <h1>
+      <a href="#" class="header__link"><img class="header__logo" src="./images/logo.svg" alt="logo"></a>
+    </h1>
   </header>
   <main class="main">
     <section class="profile">
@@ -19,7 +21,7 @@
       <div class="profile__avatar_container">
         <img class="profile__avatar" src="./images/jacques2.jpg" alt="Imagen de perfile de Jackes Cousteu">
       </div>
-      <div class=profile__text>
+      <div class="profile__text">
         <div class="profile__title_container">
           <p class="profile__title">Jacques Cousteau</p>
           <div class="profile__edit"></div>
@@ -30,70 +32,51 @@
     </section>
     <section class="cards">
       <h2 class="cards__h2">Grid de imágenes de parques Nacionales</h2>
-      <ul class="cards__container">
-        <li class="cards__card">
-          <img src="./images/yosemite-valley-card.jpg" class="cards__card_image" alt="Imagen del valle de Yosemite">
-          <div class="cards__card_text">
-            <p class="cards__card_name">Yosemite Valley</p>
-            <div class="cards__card_heart"> </div>
-          </div>
-        </li>
-        <li class="cards__card">
-          <img src="./images/lake-louise-card.png" class="cards__card_image" alt="Imagen del lago Louise">
-          <div class="cards__card_text">
-            <p class="cards__card_name">Lake Louse</p>
-            <div class="cards__card_heart"> </div>
-          </div>
-        </li>
-        <li class="cards__card">
-          <img src="./images/bald-mountains-card.png" class="cards__card_image" alt="Crepúsculo en las montañanas Bald">
-          <div class="cards__card_text">
-            <p class="cards__card_name">Bald Mountains</p>
-            <div class="cards__card_heart"> </div>
-          </div>
-        </li>
-        <li class="cards__card">
-          <img src="./images/latemar-card.png" class="cards__card_image"
-            alt="Imagen de una noche con cielo estrellado en las montañas Latemar">
-          <div class="cards__card_text">
-            <p class="cards__card_name">Latemar</p>
-            <div class="cards__card_heart"></div>
-          </div>
-        </li>
-        <li class="cards__card">
-          <img src="./images/vanoise-card.png" class="cards__card_image"
-            alt="Imagen de un lago al lado de una montaña en el parque nacional de Vanoise">
-          <div class="cards__card_text">
-            <p class="cards__card_name">Vanoise Nationa...</p>
-            <div class="cards__card_heart"></div>
-          </div>
-        </li>
-        <li class="cards__card">
-          <img src="./images/lake-dibraies-card.png" class="cards__card_image"
-            alt="Imagen de unos botes en el lago di Braies">
-          <div class="cards__card_text">
-            <p class="cards__card_name">Lago di Braies</p>
-            <div class="cards__card_heart"></div>
-          </div>
-        </li>
-      </ul>
+      <ul class="cards__container"></ul>
     </section>
   </main>
-  <footer class="footer">
-    &copy;2020 Around The U.S.
-  </footer>
+  <footer class="footer">&copy;2020 Around The U.S.</footer>
+
   <section class="popup">
     <form class="popup__container">
-      <h2 class="popup__title">Edit Profile</h2>
+      <h2 class="popup__title"></h2>
       <div class="popup__close"></div>
-      <input class="popup__input-text popup__input-text_nombre" type="text" id="nombre" name="nombre"
-        placeholder="Nombre">
-      <input class="popup__input-text popup__input-text_acerca" type="text" id="acerca" name="acerca"
-        placeholder="Acerca de mi">
-      <button class="popup__btn-save">Save</button>
+      <input class="popup__input-text popup__input-text_name" type="text">
+      <input class="popup__input-text popup__input-text_acerca" type="text">
+      <button class="popup__btn-save"></button>
     </form>
   </section>
+
+  <section class="modalImage">
+    <div class="modalImage__container">
+      <div class="modalImage__close"></div>
+      <div class="modalImage__caption"></div>
+    </div>
+  </section>
+
+  <template id="template-form">
+    <form class="popup__container">
+      <h2 class="popup__title"></h2>
+      <div class="popup__close"></div>
+      <input class="popup__input-text popup__input-text_name" type="text">
+      <input class="popup__input-text popup__input-text_acerca" type="text">
+      <button class="popup__btn-save"></button>
+    </form>
+  </template>
+
+  <template id="template-card">
+    <li class="cards__card">
+      <div class="cards__card_bin"></div>
+      <img class="cards__card_image">
+      <div class="cards__card_text">
+        <p class="cards__card_name"></p>
+        <div class="cards__card_heart"></div>
+      </div>
+    </li>
+  </template>
+
   <script src="scripts/script.js"></script>
+  <script src="scripts/script2.js"></script>
 </body>
 
 </html>
