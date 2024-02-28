@@ -73,8 +73,7 @@
   line-height: 22px;
   margin: 0;
   flex-basis: 100%;
-  max-width: 318px;
-  white-space: nowrap;
+  max-width: 318px;  
   overflow-x: auto;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -83,7 +82,7 @@
 
 .profile__add {
   width: 150px;
-  flex: 0 0 150px;
+  /* flex: 0 0 150px; */
   height: 50px;
   border: 2px solid #ffffff;
   background-color: #000000;
