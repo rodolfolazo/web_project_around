@@ -32,7 +32,7 @@
 .cards__card_bin {
   position: absolute;
   width: 18px;
-  height: 19.3px;
+  height: 19px;
   background-image: url("../images/trashWhite.png");  
   background-repeat: no-repeat;
   background-position: center;
@@ -66,7 +66,7 @@
 .cards__card_name {
   font-weight: 900;
   font-size: 24px;
-  line-height: 29.05px;
+  line-height: 29px;
   margin-left: 21px;
   width: 246px;
   text-overflow: ellipsis;
@@ -75,13 +75,13 @@
 }
 
 .cards__card_heart {
-  width: 20.76px;
-  height: 18.13px;
+  width: 20px;
+  height: 18px;
   background-image: url("../images/heart.svg");  
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  margin-right: 22.24px;
+  margin-right: 22px;
   cursor: pointer;
 }
 
