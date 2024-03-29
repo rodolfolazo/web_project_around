@@ -1,8 +1,8 @@
 //Declaro variables a utilizar
-let popup_profile = document.querySelector(".profile__edit"); //Selecciono al lapiz que abre el popup
-let popup_card = document.querySelector(".profile__add"); //Selecciono el botón añadir cards
-let popup_close = document.querySelector(".popup__close"); //Selecciono a la X que cierra el popup
-let modalImage_close = document.querySelector(".modalImage__close"); //Selecciono a la X que cierra el popup
+let profile = document.querySelector(".profile__edit"); //Selecciono al lapiz que abre el popup
+let card = document.querySelector(".profile__add"); //Selecciono el botón añadir cards
+let close = document.querySelector(".popup__close"); //Selecciono a la X que cierra el popup
+let imageClose = document.querySelector(".modalImage__close"); //Selecciono a la X que cierra el popup
 let popup = document.querySelector(".popup"); //Selecciono el popup
 let button = document.querySelector(".popup__btn-save");
 
@@ -107,8 +107,8 @@ function procesarPopup(e) {
 }
 
 //Añado eventos a mis elementos
-popup_profile.addEventListener("click", editForm);
-popup_card.addEventListener("click", editForm);
-popup_close.addEventListener("click", closePopup);
-modalImage_close.addEventListener("click", closeModal);
+profile.addEventListener("click", editForm);
+card.addEventListener("click", editForm);
+close.addEventListener("click", closePopup);
+imageClose.addEventListener("click", closeModal);
 button.addEventListener("click", procesarPopup);
