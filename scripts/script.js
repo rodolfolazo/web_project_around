@@ -193,12 +193,10 @@ cardsContainer.addEventListener("click", function(evt) {
   }
   //Eliminar card
   if (evt.target.classList.contains("cards__card_bin")) {
-    evt.target.closest(".cards__card").remove();
-    console.log("Haz hecho click en el bin");
+    evt.target.closest(".cards__card").remove();    
   }
   //Ventana emergente de imágenes
-  if (evt.target.classList.contains("cards__card_image")) {
-    console.log("Haz hecho click en la imagen");
+  if (evt.target.classList.contains("cards__card_image")) {    
     let url = evt.target.src;
     let caption = evt.target.alt;
     document.querySelector(
