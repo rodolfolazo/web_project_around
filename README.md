@@ -14,8 +14,9 @@
 
 - "Around the U.S" es un sitio web creado con HTML5, CSS3, Flexbox, Grid y BEM , siguiendo un diseño facilitado en Figma. Además se ha utilizado JavaScript para incluir algunas funcionalidades como son las de pode editar el perfil de la página, poder capturar los valores iniciales en los campos de nuestro formulario y a su vez poder actualizarlos.
 
-- El proyecto ha sido diseñado teniendo en cuenta las dimensiones de móvil y de ordenador. Para ello se ha hecho uso de las mmedias queries . El sitio ha sido testeado para una gran variedad de dispositivos como se puede apreciar en la  siguiente imágen:
-![Responsive Site](https://raw.githubusercontent.com/rodolfolazo/web_project_around/main/images/responsiv.png)
+- El proyecto ha sido diseñado teniendo en cuenta las dimensiones de móvil y de ordenador. Para ello se ha hecho uso de las medias queries . El sitio ha sido testeado para una gran variedad de dispositivos como se puede apreciar en la  siguiente imágen:
+![Responsive Site](https://raw.githubusercontent.com/rodolfolazo/web_project_around/main/images/responsive.png)
+- También puede accder al siguiente [enlace](https://ui.dev/amiresponsive?url=https://rodolfolazo.github.io/web_project_around/) para ver el funcionamiento de la web en distintos tamaños de pantalla.
 
 
 ### Características
