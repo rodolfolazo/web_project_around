@@ -35,6 +35,9 @@
 **Imágenes**
 - Las imágenes utilizadas fueron exportadas directamente de Figma y se utilizó el sitio [Tiny](https://tinypng.com/), para comprimir las imágnes y de esa manera facilitar la carga de nuestro página web.
 
+### Repositorio : Github
+- El código se encuentra alojado en Github. Para acceder al mismo puedes hacer click en el siguiente [enlace](https://github.com/rodolfolazo/web_project_around)
+
 ### Host
 - Nuestra página ha sido alojada en Github Pages en el siguiente [enlace](https://rodolfolazo.github.io/web_project_around/)
 
