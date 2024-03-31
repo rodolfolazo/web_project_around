@@ -201,6 +201,9 @@ cardsContainer.addEventListener("click", function(evt) {
     document.querySelector(
       ".modalImage__content"
     ).src = url;
+    document.querySelector(
+      ".modalImage__content"
+    ).alt = caption;
     document.querySelector(".modalImage__caption").textContent = caption;
     openModal();
   }
