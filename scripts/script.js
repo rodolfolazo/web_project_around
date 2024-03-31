@@ -106,19 +106,12 @@ function popupCards() {
     .setAttribute("placeholder", "Enlace a la imagen");
 }
 
+//POPUP
 //Función para abrir el popup
 function openPopup() {
   popup.style.display = "flex";
   setTimeout(function() {
     popup.classList.add("popup_opened");
-  }, 100);
-}
-
-//Función para abrir el modal image
-function openModal() {
-  modalImage.style.display = "block";
-  setTimeout(function() {
-    modalImage.classList.add("modalImage_opened");
   }, 100);
 }
 
@@ -130,12 +123,16 @@ function closePopup() {
   }, 1000);
 }
 
+//Modal Image
+//Función para abrir el modal image
+function openModal() {
+  modalImage.style.display = "block";  
+}
+
 //Función para cerrar el modal
 function closeModal() {
   modalImage.classList.remove("modalImage_opened");
-  setTimeout(function() {
-    modalImage.style.display = "none";
-  }, 1000);
+  modalImage.style.display = "none";  
 }
 
 //Función procesar popup
@@ -172,6 +169,7 @@ button.addEventListener("click", procesarPopup);
 function addCard() {
   //Capturo valores del formulario
   const title = document.querySelector(".popup__input-text_name").value;
+  const description = title;
   const link = document.querySelector(".popup__input-text_acerca").value;
   //Creo template, clono y le asigno valores
   const cardTemplate = document.querySelector("#template-card").content;
@@ -180,6 +178,7 @@ function addCard() {
     .cloneNode(true);
   cardElement.querySelector(".cards__card_name").textContent = title;
   cardElement.querySelector(".cards__card_image").src = link;
+  cardElement.querySelector(".cards__card_image").alt = description;
   cardsContainer.prepend(cardElement);
 }
 
@@ -198,10 +197,10 @@ cardsContainer.addEventListener("click", function(evt) {
   //Ventana emergente de imágenes
   if (evt.target.classList.contains("cards__card_image")) {    
     let url = evt.target.src;
-    let caption = evt.target.alt;
+    let caption = evt.target.alt;    
     document.querySelector(
-      ".modalImage__container"
-    ).style.backgroundImage = `url(${url})`;
+      ".modalImage__content"
+    ).src = url;
     document.querySelector(".modalImage__caption").textContent = caption;
     openModal();
   }
