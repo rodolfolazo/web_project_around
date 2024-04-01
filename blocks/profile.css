@@ -16,7 +16,7 @@
   flex: 0 0 120px;
 }
 
-.profile__avatar_image {
+.profile__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -39,7 +39,7 @@
   column-gap: 18px;
 }
 
-.profile__title_content {
+.profile__nombre {
   /* font-weight: 500; */
   font-size: 42px;
   line-height: 48px;

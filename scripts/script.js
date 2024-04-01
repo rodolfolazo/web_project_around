@@ -81,7 +81,7 @@ function popupProfile() {
     .querySelector(".popup__input-text_name")
     .setAttribute("placeholder", "Nombre");
   document.querySelector(".popup__input-text_name").value =
-    document.querySelector(".profile__title_content").textContent;
+    document.querySelector(".profile__nombre").textContent;
   //Second Input
   document
     .querySelector(".popup__input-text_acerca")
@@ -143,7 +143,7 @@ function procesarPopup(e) {
   const tipoTitulo = document.querySelector(".popup__title");
   //Si el popup es de editar perfile se ejecuta lo siguiente
   if (tipoTitulo.textContent === "Edit Profile") {
-    document.querySelector(".profile__title_content").textContent =
+    document.querySelector(".profile__nombre").textContent =
       document.querySelector(".popup__input-text_name").value;
     document.querySelector(".profile__subtitle").textContent =
       document.querySelector(".popup__input-text_acerca").value;
