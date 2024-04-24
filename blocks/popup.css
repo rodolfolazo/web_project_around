@@ -49,6 +49,7 @@
   border: none;
   border-bottom: 1px solid #000;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .popup__input-text_name {

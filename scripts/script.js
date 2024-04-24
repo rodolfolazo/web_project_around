@@ -76,20 +76,14 @@ function popupProfile() {
   document.querySelector(".popup__title").textContent = "Edit Profile";
   document.querySelector(".popup__btn-save").textContent = "Save";
   //First Input
-  document
-    .querySelector(".popup__input-text_name")
-    .setAttribute("placeholder", "Nombre");
-  document.querySelector(".popup__input-text_name").value =
-    document.querySelector(".profile__nombre").textContent;
+  const firstInput = document.querySelector(".popup__input-text_name");
+  firstInput.setAttribute("placeholder", "Nombre");
+  firstInput.value = document.querySelector(".profile__nombre").textContent;
   //Second Input
-  document
-    .querySelector(".popup__input-text_acerca")
-    .setAttribute("placeholder", "Acerca de mi");
-  document
-    .querySelector(".popup__input-text_acerca")
-    .setAttribute("type", "text");
-  document.querySelector(".popup__input-text_acerca").value =
-    document.querySelector(".profile__subtitle").textContent;
+  const secondInput = document.querySelector(".popup__input-text_acerca");
+  secondInput.setAttribute("placeholder", "Acerca de mi");
+  secondInput.setAttribute("type", "text");
+  secondInput.value = document.querySelector(".profile__subtitle").textContent;
 }
 
 //Función para editar popup de cards

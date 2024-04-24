@@ -1,3 +1,6 @@
+const formElement = document.querySelector(".popup__container");
+const formInput = formElement.querySelector(".popup__input-text");
+
 popup.addEventListener("click", function (evt) {
   const elemento = evt.target;
   if (
