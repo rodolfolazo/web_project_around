@@ -32,12 +32,12 @@ let card = document.querySelector(".profile__add"); //Selecciono el botón añad
 let close = document.querySelector(".popup__close"); //Selecciono a la X que cierra el popup
 let imageClose = document.querySelector(".modalImage__close"); //Selecciono a la X que cierra el popup
 let popup = document.querySelector(".popup"); //Selecciono el popup
+let popupForm = document.querySelector(".popup__container"); //Selecciono el formulario del popup
 let button = document.querySelector(".popup__btn-save");
 //Selecciono el contenedor de cards
 const cardsContainer = document.querySelector(".cards__container");
 //Selecciono el modal Image
 const modalImage = document.querySelector(".modalImage");
-
 
 //Creo la función que se encarga de crear los cards
 function createCard(card) {
@@ -57,7 +57,6 @@ initialCards.forEach((card) => {
   const cardElement = createCard(card);
   cardsContainer.append(cardElement);
 });
-
 
 //Funcion que edita el formulario dentro del popup
 function editForm(evt) {
@@ -110,7 +109,7 @@ function popupCards() {
 //Función para abrir el popup
 function openPopup() {
   popup.style.display = "flex";
-  setTimeout(function() {
+  setTimeout(function () {
     popup.classList.add("popup_opened");
   }, 100);
 }
@@ -118,7 +117,7 @@ function openPopup() {
 //Función para cerrar el popup
 function closePopup() {
   popup.classList.remove("popup_opened");
-  setTimeout(function() {
+  setTimeout(function () {
     popup.style.display = "none";
   }, 1000);
 }
@@ -126,13 +125,13 @@ function closePopup() {
 //Modal Image
 //Función para abrir el modal image
 function openModal() {
-  modalImage.style.display = "block";  
+  modalImage.style.display = "block";
 }
 
 //Función para cerrar el modal
 function closeModal() {
   modalImage.classList.remove("modalImage_opened");
-  modalImage.style.display = "none";  
+  modalImage.style.display = "none";
 }
 
 //Función procesar popup
@@ -163,8 +162,6 @@ close.addEventListener("click", closePopup);
 imageClose.addEventListener("click", closeModal);
 button.addEventListener("click", procesarPopup);
 
-
-
 //Creo la función que agrega una tarjeta
 function addCard() {
   //Capturo valores del formulario
@@ -185,27 +182,22 @@ function addCard() {
 //ME GUSTA , ELIMINAR CARDS y VENTANA EMERGENTE DE IMÁGENES
 //Se gestionará tanto los me gusta en los corazones como eliminar las tarjetas
 //Añado manejador de eventos al contenedor de cards
-cardsContainer.addEventListener("click", function(evt) {
+cardsContainer.addEventListener("click", function (evt) {
   //Me gusta
   if (evt.target.classList.contains("cards__card_heart")) {
     evt.target.classList.toggle("cards__card_active");
   }
   //Eliminar card
   if (evt.target.classList.contains("cards__card_bin")) {
-    evt.target.closest(".cards__card").remove();    
+    evt.target.closest(".cards__card").remove();
   }
   //Ventana emergente de imágenes
-  if (evt.target.classList.contains("cards__card_image")) {    
+  if (evt.target.classList.contains("cards__card_image")) {
     let url = evt.target.src;
-    let caption = evt.target.alt;    
-    document.querySelector(
-      ".modalImage__content"
-    ).src = url;
-    document.querySelector(
-      ".modalImage__content"
-    ).alt = caption;
+    let caption = evt.target.alt;
+    document.querySelector(".modalImage__content").src = url;
+    document.querySelector(".modalImage__content").alt = caption;
     document.querySelector(".modalImage__caption").textContent = caption;
     openModal();
   }
 });
-
