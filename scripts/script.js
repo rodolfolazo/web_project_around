@@ -83,6 +83,9 @@ function popupProfile() {
   firstInput.setAttribute("minlength", "2");
   firstInput.setAttribute("maxlength", "40");
   firstInput.value = document.querySelector(".profile__nombre").textContent;
+  //First span
+  const firstSpan = firstInput.nextElementSibling;
+  firstSpan.classList.add("name-input-error");
   //Second Input
   const secondInput = document.querySelector(".popup__input-text_acerca");
   secondInput.setAttribute("placeholder", "Acerca de mi");
@@ -92,6 +95,9 @@ function popupProfile() {
   secondInput.setAttribute("minlength", "2");
   secondInput.setAttribute("maxlength", "200");
   secondInput.value = document.querySelector(".profile__subtitle").textContent;
+  //Second input
+  const secondSpan = secondInput.nextElementSibling;
+  secondSpan.classList.add("acerca-input-error");
 }
 
 //Función para editar popup de cards
@@ -106,6 +112,10 @@ function popupCards() {
   firstInput.setAttribute("required", "true");
   firstInput.setAttribute("minlength", "2");
   firstInput.setAttribute("maxlength", "30");
+  //First span
+  const firstSpan = firstInput.nextElementSibling;
+  firstSpan.classList.add("titulo-input-error");
+
   //Second Input
   const secondInput = document.querySelector(".popup__input-text_acerca");
   secondInput.value = "";
@@ -113,6 +123,9 @@ function popupCards() {
   secondInput.setAttribute("type", "url");
   secondInput.setAttribute("id", "url-input");
   secondInput.setAttribute("required", "true");
+  //Second span
+  const secondSpan = secondInput.nextElementSibling;
+  secondSpan.classList.add("url-input-error");
 }
 
 //POPUP
@@ -126,6 +139,16 @@ function openPopup() {
 
 //Función para cerrar el popup
 function closePopup() {
+  //Reseteo las clases en el primer span
+  const firstInput = document.querySelector(".popup__input-text_name");
+  const firstSpan = firstInput.nextElementSibling;
+  firstSpan.className = "popup__input-error";
+
+  //Reseteo las clases en el segundo span
+  const secondInput = document.querySelector(".popup__input-text_acerca");
+  const secondSpan = secondInput.nextElementSibling;
+  secondSpan.className = "popup__input-error";
+
   popup.classList.remove("popup_opened");
   setTimeout(function () {
     popup.style.display = "none";
