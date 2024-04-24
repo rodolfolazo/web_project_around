@@ -78,10 +78,12 @@ function popupProfile() {
   //First Input
   const firstInput = document.querySelector(".popup__input-text_name");
   firstInput.setAttribute("placeholder", "Nombre");
+  firstInput.setAttribute("id", "name-input");
   firstInput.value = document.querySelector(".profile__nombre").textContent;
   //Second Input
   const secondInput = document.querySelector(".popup__input-text_acerca");
   secondInput.setAttribute("placeholder", "Acerca de mi");
+  secondInput.setAttribute("id", "acerca-input");
   secondInput.setAttribute("type", "text");
   secondInput.value = document.querySelector(".profile__subtitle").textContent;
 }
@@ -94,11 +96,13 @@ function popupCards() {
   const firstInput = document.querySelector(".popup__input-text_name");
   firstInput.value = "";
   firstInput.setAttribute("placeholder", "Título");
+  firstInput.setAttribute("id", "titulo-input");
   //Second Input
   const secondInput = document.querySelector(".popup__input-text_acerca");
   secondInput.value = "";
   secondInput.setAttribute("placeholder", "Enlace a la imagen");
   secondInput.setAttribute("type", "url");
+  secondInput.setAttribute("id", "url-input");
 }
 
 //POPUP
