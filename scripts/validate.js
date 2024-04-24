@@ -1,14 +1,11 @@
-document.addEventListener("click", function (evt) {
+popup.addEventListener("click", function (evt) {
+  const elemento = evt.target;
   if (
-    evt.target != popupForm &&
-    evt.target != profile &&
-    evt.target != card &&
-    !evt.target.classList.contains("popup__input-text")
+    !elemento.classList.contains("popup__container") &&
+    !elemento.classList.contains("popup__title") &&
+    !elemento.classList.contains("popup__input-text")
   ) {
-    console.log("Has hecho click fuera de la ventana");
-    /* closePopup(); */
-  } else {
-    console.log("Has hecho click en el formulario");
+    closePopup();
   }
 });
 

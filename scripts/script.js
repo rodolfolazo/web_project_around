@@ -85,6 +85,9 @@ function popupProfile() {
   document
     .querySelector(".popup__input-text_acerca")
     .setAttribute("placeholder", "Acerca de mi");
+  document
+    .querySelector(".popup__input-text_acerca")
+    .setAttribute("type", "text");
   document.querySelector(".popup__input-text_acerca").value =
     document.querySelector(".profile__subtitle").textContent;
 }
@@ -94,15 +97,14 @@ function popupCards() {
   document.querySelector(".popup__title").textContent = "Nuevo Lugar";
   document.querySelector(".popup__btn-save").textContent = "Crear";
   //First Input
-  document.querySelector(".popup__input-text_name").value = "";
-  document
-    .querySelector(".popup__input-text_name")
-    .setAttribute("placeholder", "Título");
+  const firstInput = document.querySelector(".popup__input-text_name");
+  firstInput.value = "";
+  firstInput.setAttribute("placeholder", "Título");
   //Second Input
-  document.querySelector(".popup__input-text_acerca").value = "";
-  document
-    .querySelector(".popup__input-text_acerca")
-    .setAttribute("placeholder", "Enlace a la imagen");
+  const secondInput = document.querySelector(".popup__input-text_acerca");
+  secondInput.value = "";
+  secondInput.setAttribute("placeholder", "Enlace a la imagen");
+  secondInput.setAttribute("type", "url");
 }
 
 //POPUP
