@@ -41,6 +41,10 @@
   margin-bottom: 54px;
 }
 
+.pupup__field {
+  position: relative;
+}
+
 .popup__input-text {
   font-size: 14px;
   font-weight: 400;
